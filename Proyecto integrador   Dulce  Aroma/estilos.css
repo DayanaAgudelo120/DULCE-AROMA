@@ -1,0 +1,192 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Evita el desplazamiento */
+    font-family: 'Arial', sans-serif; /* Fuente general */
+}
+
+header {
+    display: flex; /* Usa flexbox para organizar el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: space-between; /* Espacia el logo y el menú */
+    padding: 20px; /* Espaciado interno */
+    position: relative;
+    z-index: 2; /* Asegura que el header esté encima del video */
+    background-color: transparent; /* Totalmente transparente */
+}
+
+.logo img {
+    max-height: 80px; /* Ajusta la altura máxima del logo */
+}
+
+nav {
+    margin-left: 20px; /* Espaciado al lado del logo */
+}
+
+nav ul {
+    display: flex; /* Muestra los enlaces en una fila */
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0; /* Quita el padding */
+    margin: 0; /* Quita el margin */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre los enlaces */
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255); /* Color del texto del enlace */
+    text-decoration: none; /* Quita el subrayado */
+    font-size: 1.1em; /* Tamaño del texto */
+    transition: color 0.3s; /* Añade una transición suave */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Sombra más gruesa */
+}
+
+nav ul li a:hover {
+    color: #ffcc00; /* Color al pasar el ratón */
+}
+
+.background-video {
+    position: fixed; /* Fija el video en la parte de fondo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 180%;
+   
+    
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el área */
+}
+
+.content {
+    position: relative;
+    z-index: 3; /* Asegura que el contenido esté por encima del video */
+    color: white; /* Cambia el color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 20px;
+    
+}
+
+footer {
+    position: fixed; /* Fija el footer en la parte inferior */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent; /* Totalmente transparente */
+    color: rgb(255, 255, 255); /* Color del texto del footer */
+    text-align: center;
+    padding: 10px 0;
+    z-index: 2; /* Asegura que el footer esté por encima del video */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9); /* Sombra más gruesa */
+}
+
+.footer-socials ul {
+    display: flex; /* Muestra los enlaces en una fila */
+    justify-content: center; /* Centra los enlaces */
+    list-style-type: none; /* Quita los puntos de la lista */
+    padding: 0; /* Quita el padding */
+}
+
+.footer-socials ul li {
+    margin: 0 15px; /* Espaciado entre los enlaces de redes sociales */
+}
+
+
+.footer-socials ul li a {
+    color: white; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado */
+    transition: color 0.3s; /* Añade una transición suave */
+    color: inherit; /* Permitir que el color del icono sea el color heredado */
+    font-size: 1.5em; /* Tamaño de fuente más grande */
+}
+
+.footer-socials ul li a:hover {
+    color: #ffcc00; /* Color al pasar el ratón */
+   
+}
+
+
+.welcome-banner {
+    position: fixed; /* Fija el banner en la pantalla */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el banner */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    color: #D2691E; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    text-shadow: 4px 4px 10px #ffffff(255, 255, 255, 0.9); /* Sombra más intensa */
+    font-family: 'Roboto', sans-serif; /* Fuente general */
+    padding: 80px; /* Espaciado interno */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    opacity: 0; /* Inicialmente oculto */
+    visibility: hidden; /* Evita que se pueda hacer clic en él */
+    transition: opacity 0.5s, visibility 0.5s; /* Transiciones suaves */
+    border-radius: 40px;
+    box-shadow: 0 8px 25px rgb(255, 255, 255); /* Sombra del banner más intensa */
+}
+
+.welcome-banner.show {
+    opacity: 1; /* Muestra el banner */
+    visibility: visible; /* Permite hacer clic en él */
+}
+
+.welcome-banner h1 {
+    margin: 0; /* Quita el margen */
+    font-size: 3em; /* Tamaño de fuente más grande */
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.9); /* Sombra más intensa */
+}
+
+.close-button {
+    position: absolute; /* Posiciona la "X" en la esquina */
+    top: 10px; /* Espaciado desde arriba */
+    right: 10px; /* Espaciado desde la derecha */
+    font-size: 2.9em; /* Tamaño de la "X" */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+    color: white; /* Color de la "X" */
+}
+
+.close-button:hover {
+    color: #ffcc00; /* Cambia el color al pasar el ratón */
+    
+}
+
+.coffee-image {
+    width: 100px; /* Ancho de la imagen */
+    height: auto; /* Altura automática para mantener proporciones */
+    display: block; /* Muestra como bloque */
+    margin: 10px auto; /* Centra la imagen */
+    animation: moveCoffee 1.5s infinite alternate; /* Animación de movimiento más rápida */
+}
+
+/* Definición de la animación */
+@keyframes moveCoffee {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-20px); } /* Aumenta el movimiento hacia arriba */
+}
+.arrow {
+    font-size: 2em; /* Tamaño de las flechas */
+    color: #ddc34d; /* Color de las flechas */
+    animation: bounce 1s infinite; /* Animación de rebote */
+    display: inline-block; /* Permite que se alineen */
+    
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Rebote hacia arriba */
+}
+.menu-title {
+    text-align: center; /* Centra el texto */
+    margin-top: 20px; /* Espaciado superior */
+    font-size: 1.9em; /* Tamaño del título */
+    color: #ffffff; /* Color del texto */
+    cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
+
+
+

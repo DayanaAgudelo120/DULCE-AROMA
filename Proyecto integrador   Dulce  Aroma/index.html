@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dulce Aroma - Café</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+    
+
+   
+    
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="icon" href="/logo/Imagen de WhatsApp 2024-09-24 a las 17.38.08_a58e06bc.jpg" type="logo"> 
+        
+    </head>
+    
+</head>
+<body>
+    <div class="welcome-banner" id="welcomeBanner">
+        <span class="close-button" onclick="closeBanner()">&times;</span>
+        <img src="/imagenes/cafe.png" alt="Taza de Café" class="coffee-image">
+        <h1>Bienvenido a Dulce Aroma</h1>
+        <p>En Dulce Aroma, te invitamos a disfrutar de una experiencia única en café,  Ven y descubre un lugar donde el aroma del café fresco se mezcla con la calidez de un ambiente acogedor.
+           </p>
+               <p> Estamos aquí para hacer de cada visita una experiencia inolvidable</p>
+
+               <div class="menu-title" onclick="window.location.href='menu-completo.html';">
+                <span class="arrow">➡️</span>
+                Conoce nuestro menú
+                <span class="arrow">⬅️</span>
+            </div>
+            
+    </div>
+    
+    
+    <header>
+        <div class="logo">
+            <img src="/logo/Imagen de WhatsApp 2024-09-24 a las 17.38.08_a58e06bc.jpg" alt="Dulce Aroma Logo">
+        </div>
+        
+        <nav>
+
+
+            <ul>
+                <li><a href="index.html" target="_blank">Inicio</a></li> <!-- Abre en nueva pestaña -->
+                <li><a href="menu-completo.html" target="_blank">menu</a></li><!-- Abre en nueva pestaña -->
+               
+                <li><a href="contacto-completo.html" target="_blank">Contáctarnos</a></li><!-- Abre en nueva pestaña -->
+                <li><a href="unete-a-nosotros.html" target="_blank">unete a nosotros</a></li> <!-- Abre en nueva pestaña -->
+                <li><a href="mision-vision.html" target="_blank">Misión & Visión</a></li> <!-- Abre en nueva pestaña -->
+                
+                
+                
+            
+            </ul>
+            
+           
+        </nav>
+        
+    </header>
+
+    
+
+    
+
+    <section class="background-video">
+        <video autoplay muted loop class="video-background">
+            <source src="/Video de fondo/7662069-hd_1080_1920_30fps.mp4" type="video/mp4">
+           
+        </video>
+        <div class="content">
+            
+            <h2 class="bienvenido">Bienvenido a Dulce Aroma</h2>
+            <p>En Dulce Aroma, te invitamos a disfrutar de una experiencia única en café.
+            Nuestra pasión por el café se refleja en cada taza que servimos, utilizando solo los mejores granos y técnicas
+             Ven y descubre un lugar donde el aroma del café fresco se mezcla con la calidez de un ambiente acogedor.</p>
+               <p> Estamos aquí para hacer de cada visita una experiencia inolvidable..</p>
+            
+            
+    
+        </div>
+    </section>
+    
+
+   
+       
+             
+        
+    </section>
+
+    
+    
+
+   
+
+    <footer>
+        
+        <div class="footer-socials">
+    
+            <ul>
+                <li><a href="https://www.facebook.com/DulceAroma" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/DulceAroma" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.twitter.com/DulceAroma" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="https://wa.me/tu_numero" target="_blank"><i class="fab fa-whatsapp"></i></a></li> 
+        
+            </ul>
+            </div>
+            <p>&copy; 2024 Dulce Aroma. Todos los derechos reservados.</p>
+        </footer>
+        
+    </footer>
+
+    <script>
+        // Mostrar el banner cuando se carga la página
+        window.onload = function() {
+            setTimeout(() => {
+                document.querySelector('.welcome-banner').classList.add('show');
+            }, 1000); // Retraso de 1 segundo
+        };
+        // Función para cerrar el banner
+        function closeBanner() {
+            document.querySelector('.welcome-banner').classList.remove('show');
+        }
+    </script>
+    
+    
+</body>
+
+</html>
